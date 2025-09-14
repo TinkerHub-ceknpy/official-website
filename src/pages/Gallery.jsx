@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 // Example images (place them in public/gallery/)
 const images = [
-  '/frnd.jpg',
+  '/events/frnd.jpg',
   '/gallery/2.jpg',
   '/gallery/3.jpg',
   '/gallery/4.jpg',

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import posts from '../data/posts'
 import PostCard from '../components/PostCard'
 
+
 export default function Home() {
   return (
     <div>
