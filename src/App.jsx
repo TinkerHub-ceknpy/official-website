@@ -9,7 +9,9 @@ import Members from "./pages/Members"
 import Contact from "./pages/Contact"
 import Gallery from "./pages/Gallery"
 import NotFound from "./pages/NotFound"
-import Loader from "./components/Loader"   
+import Loader from "./components/Loader"  
+
+
 
 export default function App() {
   const [loading, setLoading] = useState(true)

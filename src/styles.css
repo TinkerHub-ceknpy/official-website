@@ -52,7 +52,7 @@ body { margin: 0; font-family: Inter, system-ui, -apple-system, 'Segoe UI', Robo
 
 .btn.primary {
   background: white;
-  color: #4f46e5;
+  color: #FAEBD7;
 }
 
 .btn.secondary {
@@ -78,7 +78,7 @@ body { margin: 0; font-family: Inter, system-ui, -apple-system, 'Segoe UI', Robo
 .contact-form { display:flex; flex-direction:column; gap:0.5rem; max-width:520px; }
 .contact-form input, .contact-form textarea { padding:0.6rem; border-radius:6px; border:1px solid #ddd; }
 .contact-form button { padding:0.6rem 1rem; border-radius:8px; border:0; cursor:pointer; }
-.success { color: green; }
+.success { color: rgb(227, 218, 85); }
 
 
 /* Footer */
