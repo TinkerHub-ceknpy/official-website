@@ -1,5 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import PixelCard from '../components/PixelCard'
+import '../components/PixelCard.css'
 
 // Core Team
 const membersList = [
@@ -19,48 +21,33 @@ const volunteersList = [
 
 export default function Members() {
   return (
-    <motion.section
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.6 }}
+    <motion.div
+      initial={{ opacity: 0, y: 60 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -60 }}
+      transition={{ duration: 0.5 }}
     >
-      {/* Core Team */}
-      <h2>Core Team</h2>
-      <div className="members-grid">
-        {membersList.map((m, i) => (
-          <motion.div
-            key={m.id}
-            className="member-card"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: i * 0.15 }}
-            whileHover={{ scale: 1.05 }}
-          >
-            <img src={m.photo} alt={m.name} className="member-photo" />
-            <h3>{m.name}</h3>
-            <p className="muted">{m.role}</p>
-          </motion.div>
-        ))}
-      </div>
+      <motion.section
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6 }}
+      >
+        {/* Core Team */}
+        <h2>Core Team</h2>
+        <div className="members-grid">
+          {membersList.map((m) => (
+            <PixelCard key={m.id} name={m.name} role={m.role} photo={m.photo} />
+          ))}
+        </div>
 
-      {/* Volunteers */}
-      <h2>Volunteers</h2>
-      <div className="members-grid">
-        {volunteersList.map((v, i) => (
-          <motion.div
-            key={v.id}
-            className="member-card"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: i * 0.15 }}
-            whileHover={{ scale: 1.05 }}
-          >
-            <img src={v.photo} alt={v.name} className="member-photo" />
-            <h3>{v.name}</h3>
-            <p className="muted">{v.role}</p>
-          </motion.div>
-        ))}
-      </div>
-    </motion.section>
+        {/* Volunteers */}
+        <h2>Volunteers</h2>
+        <div className="members-grid">
+          {volunteersList.map((v) => (
+            <PixelCard key={v.id} name={v.name} role={v.role} photo={v.photo} />
+          ))}
+        </div>
+      </motion.section>
+    </motion.div>
   )
 }
