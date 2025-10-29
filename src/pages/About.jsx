@@ -3,7 +3,12 @@ import { motion } from 'framer-motion'
 
 export default function Home() {
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0, y: 60 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -60 }}
+      transition={{ duration: 0.5 }}
+    >
       <motion.section
         className="hero"
         initial={{ opacity: 0, y: 40 }}
@@ -74,7 +79,6 @@ export default function Home() {
           coding.
         </motion.p>
       </motion.section>
-    </div>
-
-)
+    </motion.div>
+  )
 }

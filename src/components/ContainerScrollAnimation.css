@@ -1,0 +1,10 @@
+.container-scroll-animation {
+  transition: transform 0.5s cubic-bezier(.21,1,.35,1), opacity 0.5s cubic-bezier(.21,1,.35,1);
+  will-change: transform, opacity;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(99,102,241,0.08), 0 2px 8px rgba(0,0,0,0.04);
+  padding: 2rem 1.5rem;
+  margin: 2rem auto;
+  max-width: 600px;
+}
