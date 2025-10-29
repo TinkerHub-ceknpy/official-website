@@ -3,7 +3,7 @@
 
 ---
 
-## 🌈 Why Campus Communities?
+## Why Campus Communities?
 
 The perfect combination (after *pazhampori and beef roast* 😋) is — *Community and Tinkering*.  
 
